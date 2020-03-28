@@ -52,7 +52,7 @@ async delete(request, response) {
       .select('ong_id')
       .first();
 
-      if(incident.ong_id != ong_id) {
+      if(incident.ong_id !== ong_id) {
       return response.status(401).json({ erro:'Operation not permition' });
       }
 
